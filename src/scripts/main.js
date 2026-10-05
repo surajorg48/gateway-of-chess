@@ -99,7 +99,7 @@ function initHeroCarousel() {
 
   let currentIndex = 0;
   let timer = null;
-  const slideInterval = 7500;
+  const slideInterval = 5500;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function showSlide(index) {
@@ -110,11 +110,13 @@ function initHeroCarousel() {
       const isActive = i === index;
       slide.classList.toggle('active', isActive);
       slide.setAttribute('aria-hidden', !isActive);
+      slide.setAttribute('tabindex', isActive ? '0' : '-1');
     });
 
     dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-      dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+      const isActive = i === index;
+      dot.classList.toggle('active', isActive);
+      dot.setAttribute('aria-current', isActive ? 'true' : 'false');
     });
 
     currentIndex = index;
@@ -136,21 +138,27 @@ function initHeroCarousel() {
   }
 
   if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       showSlide(currentIndex - 1);
       startTimer();
     });
   }
 
   if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       showSlide(currentIndex + 1);
       startTimer();
     });
   }
 
   dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
+    dot.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       showSlide(i);
       startTimer();
     });
@@ -178,12 +186,16 @@ function initHeroCarousel() {
   let touchEndX = 0;
 
   carousel.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
+    if (e.changedTouches && e.changedTouches[0]) {
+      touchStartX = e.changedTouches[0].screenX;
+    }
   }, { passive: true });
 
   carousel.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
+    if (e.changedTouches && e.changedTouches[0]) {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }
   }, { passive: true });
 
   function handleSwipe() {

@@ -1,0 +1,83 @@
+:root {
+  /* Brand Palette */
+  --gold-50: #FCF9ED;
+  --gold-100: #F7F0D4;
+  --gold-200: #EEDFA6;
+  --gold-300: #E4CB75;
+  --gold-400: #DCB94B;
+  --gold-500: #C59A27; /* Primary Brand Gold */
+  --gold-600: #A8801C;
+  --gold-700: #886415;
+  --gold-800: #6B4E12;
+  --gold-900: #4D370B;
+
+  --gold-primary: #C59A27;
+  --gold-bright: #E6BC40;
+  --gold-glow: rgba(197, 154, 39, 0.28);
+  --gold-subtle: rgba(197, 154, 39, 0.08);
+  --gold-border: rgba(197, 154, 39, 0.22);
+  --gold-gradient: linear-gradient(135deg, #E6BC40 0%, #C59A27 100%);
+  --gold-gradient-text: linear-gradient(135deg, #C59A27 0%, #E6BC40 50%, #B88A1E 100%);
+
+  /* Neutrals & Dark Mode */
+  --dark-950: #080A0E;
+  --dark-900: #0C0F15;
+  --dark-850: #10141D;
+  --dark-800: #161B26;
+  --dark-700: #1F2636;
+  --dark-600: #2C3549;
+
+  /* Surfaces */
+  --bg-primary: #0C0F15;
+  --bg-secondary: #10141D;
+  --bg-card-dark: #151A24;
+  --border-dark: rgba(255, 255, 255, 0.09);
+  --border-dark-hover: rgba(197, 154, 39, 0.4);
+
+  /* Light Theme Surfaces */
+  --bg-light: #FFFFFF;
+  --bg-light-soft: #F8F9FA;
+  --bg-light-warm: #FAF8F5;
+  --bg-light-alt: #F1F3F7;
+  --border-light: #E5E7EB;
+  --border-light-subtle: #ECEEF2;
+
+  /* Typography Colors */
+  --text-light-primary: #FFFFFF;
+  --text-light-secondary: #D1D5DB;
+  --text-light-muted: #9CA3AF;
+  --text-light-faint: #6B7280;
+
+  --text-dark-primary: #111827;
+  --text-dark-secondary: #374151;
+  --text-dark-muted: #6B7280;
+  --text-dark-faint: #9CA3AF;
+
+  /* Typography Fonts */
+  --font-sans: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  /* Spacing */
+  --container-max: 1280px;
+  --container-wide: 1600px;
+  --header-height: 80px;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+  --shadow-gold: 0 8px 30px rgba(197, 154, 39, 0.22);
+  --shadow-dark-card: 0 16px 36px rgba(0, 0, 0, 0.35);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}

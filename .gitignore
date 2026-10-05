@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+package-lock.json.bak
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# Editor & OS files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Raw design mockups & temporary helper scripts (not used in web assets)
+WebSite First Set/
+WebSite - Second Set/
+analyze_designs.ps1
+check_right_edge.ps1

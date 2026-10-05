@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Demo — GatewayOfChess</title>
+  <meta name="description" content="Request a personalized live walkthrough of the GatewayOfChess software platform for your chess academy.">
+  <link rel="icon" type="image/png" href="assets/brand/Gateway of Chess Gold Emblem.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="header-brand" aria-label="GatewayOfChess Home">
+        <img src="assets/brand/Gateway of Chess Logo.png" alt="GatewayOfChess" class="brand-logo-img">
+      </a>
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="platform.html" class="nav-link">Platform</a>
+        <a href="for-academies.html" class="nav-link">For Academies</a>
+        <a href="for-coaches.html" class="nav-link">For Coaches</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about-us.html" class="nav-link">About Us</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="login-link">Login</a>
+        <a href="book-demo.html" class="btn btn-primary btn-sm">Book a Demo &rarr;</a>
+        <button class="mobile-menu-btn" aria-label="Open Mobile Menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <img src="assets/brand/Gateway of Chess Logo.png" alt="GatewayOfChess" class="brand-logo-img" style="height: 38px;">
+      <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="platform.html" class="nav-link">Platform</a>
+      <a href="for-academies.html" class="nav-link">For Academies</a>
+      <a href="for-coaches.html" class="nav-link">For Coaches</a>
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="academics.html" class="nav-link">Academics & Learning</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="about-us.html" class="nav-link">About Us</a>
+      <a href="login.html" class="nav-link">Login</a>
+    </nav>
+    <a href="book-demo.html" class="btn btn-primary btn-block">Book a Demo</a>
+  </aside>
+
+  <main id="mainContent" class="form-page-layout">
+    <div class="container">
+      <div class="demo-form-grid">
+        
+        <!-- Form Column -->
+        <div class="form-card">
+          <span class="eyebrow">SCHEDULE A LIVE WALKTHROUGH</span>
+          <h1 style="font-size: 2rem; font-weight: 800; color: var(--text-dark-primary); margin-bottom: 0.75rem;">
+            Book Your Personalized <span class="text-gold">Demo.</span>
+          </h1>
+          <p style="font-size: 0.9375rem; color: var(--text-dark-secondary); margin-bottom: 2rem; line-height: 1.6;">
+            See how GatewayOfChess streamlines your academy operations, empowers coaches, and connects your learners' journey.
+          </p>
+
+          <form id="demoBookingForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName" class="form-label">Full Name *</label>
+                <input type="text" id="fullName" class="form-control" placeholder="Grandmaster / Coach Name" required>
+              </div>
+              <div class="form-group">
+                <label for="workEmail" class="form-label">Email Address *</label>
+                <input type="email" id="workEmail" class="form-control" placeholder="contact@academy.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number *</label>
+                <input type="tel" id="phone" class="form-control" placeholder="+1 (555) 000-0000" required>
+              </div>
+              <div class="form-group">
+                <label for="academyName" class="form-label">Academy Name *</label>
+                <input type="text" id="academyName" class="form-control" placeholder="e.g. Royal Chess Academy" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="numLearners" class="form-label">Number of Learners</label>
+                <select id="numLearners" class="form-control">
+                  <option value="1-50">1 - 50 Students</option>
+                  <option value="51-150">51 - 150 Students</option>
+                  <option value="151-500">151 - 500 Students</option>
+                  <option value="500+">500+ Students</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="numCoaches" class="form-label">Number of Coaches</label>
+                <select id="numCoaches" class="form-control">
+                  <option value="1-2">1 - 2 Coaches</option>
+                  <option value="3-5">3 - 5 Coaches</option>
+                  <option value="6-10">6 - 10 Coaches</option>
+                  <option value="10+">10+ Coaches</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="location" class="form-label">Academy Location (City, Country)</label>
+              <input type="text" id="location" class="form-control" placeholder="e.g. London, United Kingdom">
+            </div>
+
+            <div class="form-group">
+              <label for="notes" class="form-label">Tell Us About Your Academy (Optional)</label>
+              <textarea id="notes" rows="3" class="form-control" placeholder="What are your main operational or coaching goals?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 1rem;">
+              Book a Demo
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+
+          <!-- Interactive Success Feedback Box -->
+          <div id="formSuccessMessage" style="display: none; padding: 2.5rem; text-align: center; background: var(--bg-light-soft); border: 2px solid var(--gold-border); border-radius: var(--radius-lg);">
+            <div class="foundation-icon-circle" style="background: var(--gold-primary); color: #FFF; width: 56px; height: 56px; margin: 0 auto 1.25rem;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--text-dark-primary); margin-bottom: 0.5rem;">
+              Demo Request Received!
+            </h3>
+            <p style="color: var(--text-dark-secondary); font-size: 0.9375rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              Thank you for your interest in GatewayOfChess. A member of our team will contact you shortly to schedule your personalized live platform walkthrough.
+            </p>
+            <a href="index.html" class="btn btn-outline" style="border-color: var(--gold-primary); color: var(--gold-primary);">
+              Return to Homepage
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Sidebar / Value Proposition Column -->
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          
+          <div class="card-light" style="padding: 2.5rem; border-color: var(--gold-border);">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+              <img src="assets/brand/Gateway of Chess Gold Emblem.png" alt="Emblem" style="width: 44px; height: 44px; object-fit: contain;">
+              <div>
+                <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark-primary);">What to Expect in Your Demo</h3>
+                <p style="font-size: 0.8125rem; color: var(--text-dark-muted);">Tailored for academy directors & coaches</p>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="display: flex; gap: 0.75rem;">
+                <span style="color: var(--gold-primary); font-weight: 800;">1.</span>
+                <p style="font-size: 0.875rem; color: var(--text-dark-secondary); line-height: 1.5;">
+                  <strong>Comprehensive Tour:</strong> A live 30-minute demonstration of academy batch management, coach tools, and student learning paths.
+                </p>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem;">
+                <span style="color: var(--gold-primary); font-weight: 800;">2.</span>
+                <p style="font-size: 0.875rem; color: var(--text-dark-secondary); line-height: 1.5;">
+                  <strong>Workflow Analysis:</strong> Review how your academy currently schedules classes, tracks attendance, and distributes homework.
+                </p>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem;">
+                <span style="color: var(--gold-primary); font-weight: 800;">3.</span>
+                <p style="font-size: 0.875rem; color: var(--text-dark-secondary); line-height: 1.5;">
+                  <strong>Onboarding & Migration:</strong> Step-by-step guidance on importing existing student records without disrupting ongoing terms.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Supporting Image Card -->
+          <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-light);">
+            <img src="assets/coaches/Chess Coaching in a Warm Academy.png" alt="Coaching interaction" style="width: 100%; height: 260px; object-fit: cover;">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-container">
+            <img src="assets/brand/Gateway of Chess Logo.png" alt="GatewayOfChess" class="footer-logo-img">
+          </div>
+          <p class="footer-tagline">The Complete Software Platform for Every Chess Academy.</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="platform.html">Overview</a></li>
+            <li><a href="/platform#features">Features</a></li>
+            <li><a href="academics.html">Learning</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">For Academies</h4>
+          <ul class="footer-links">
+            <li><a href="for-academies.html">Academy Management</a></li>
+            <li><a href="/for-academies#why-goc">Why GatewayOfChess</a></li>
+            <li><a href="book-demo.html">Book a Demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">For Coaches</h4>
+          <ul class="footer-links">
+            <li><a href="for-coaches.html">Coach Platform</a></li>
+            <li><a href="/for-coaches#teaching">Teaching & Learning</a></li>
+            <li><a href="/for-coaches#resources">Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="/book-demo#contact">Contact Us</a></li>
+            <li><a href="/about-us#blog">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Stay Updated</h4>
+          <p class="footer-newsletter-text">Get the latest updates, tips and insights for chess academy leaders.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to updates!');">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" required aria-label="Email address for newsletter">
+            <button type="submit" class="newsletter-submit" aria-label="Subscribe">&rarr;</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 GatewayOfChess. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="/about-us#privacy">Privacy Policy</a>
+          <a href="/about-us#terms">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

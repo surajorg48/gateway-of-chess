@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — GatewayOfChess Portal</title>
+  <meta name="description" content="Sign in to your GatewayOfChess academy workspace, coaching portal, or learner account.">
+  <link rel="icon" type="image/png" href="assets/brand/Gateway of Chess Gold Emblem.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="background-color: var(--bg-light-soft);">
+
+  <!-- Minimal Header -->
+  <header style="padding: 1.5rem 0; border-bottom: 1px solid var(--border-light); background: #FFFFFF;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+      <a href="index.html" aria-label="GatewayOfChess Home">
+        <img src="assets/brand/Gateway of Chess Logo.png" alt="GatewayOfChess" class="brand-logo-img" style="height: 42px;">
+      </a>
+      <a href="index.html" style="font-size: 0.875rem; font-weight: 600; color: var(--text-dark-secondary); display: flex; align-items: center; gap: 0.4rem;">
+        &larr; Back to Home
+      </a>
+    </div>
+  </header>
+
+  <main class="form-page-layout">
+    <div class="container">
+      <div class="login-container">
+        
+        <div class="form-card">
+          <div class="login-header">
+            <img src="assets/brand/Gateway of Chess Gold Emblem.png" alt="Gateway of Chess Emblem" style="width: 56px; height: 56px; margin: 0 auto 1rem; object-fit: contain;">
+            <h1 class="login-role-heading" style="font-size: 1.5rem; font-weight: 800; color: var(--text-dark-primary); margin-bottom: 0.5rem;">
+              Academy Portal Login
+            </h1>
+            <p style="font-size: 0.875rem; color: var(--text-dark-muted);">
+              Enter your credentials to access your unified chess workspace.
+            </p>
+          </div>
+
+          <!-- Role Selector Tabs -->
+          <div class="login-role-tabs" role="tablist">
+            <button class="role-tab-btn active" data-role="admin" role="tab" aria-selected="true">Academy Admin</button>
+            <button class="role-tab-btn" data-role="coach" role="tab" aria-selected="false">Coach</button>
+            <button class="role-tab-btn" data-role="student" role="tab" aria-selected="false">Learner</button>
+          </div>
+
+          <form id="loginForm" onsubmit="event.preventDefault(); document.getElementById('loginNotice').style.display = 'block';">
+            <div class="form-group">
+              <label for="loginEmail" class="form-label">Email or Username</label>
+              <input type="text" id="loginEmail" class="form-control" placeholder="name@chessacademy.com" required>
+            </div>
+
+            <div class="form-group">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label for="loginPassword" class="form-label">Password</label>
+                <a href="#" onclick="alert('Password recovery service will be connected to your academy email server.'); return false;" style="font-size: 0.75rem; color: var(--gold-primary); font-weight: 600;">Forgot password?</a>
+              </div>
+              <input type="password" id="loginPassword" class="form-control" placeholder="••••••••" required>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
+              <input type="checkbox" id="rememberMe" style="accent-color: var(--gold-primary);">
+              <label for="rememberMe" style="font-size: 0.8125rem; color: var(--text-dark-secondary);">Remember this device</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              Sign In
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+
+            <div id="loginNotice" style="display: none; margin-top: 1.25rem; padding: 0.875rem; background: var(--gold-subtle); border: 1px solid var(--gold-border); border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--gold-dark); text-align: center;">
+              <strong>Frontend Preview:</strong> Authentication endpoint is ready for production backend integration. Contact your academy administrator for active credentials.
+            </div>
+          </form>
+
+          <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light); font-size: 0.875rem; color: var(--text-dark-muted);">
+            New academy? <a href="book-demo.html" style="color: var(--gold-primary); font-weight: 700;">Book a Demo &rarr;</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer style="padding: 1.5rem 0; text-align: center; font-size: 0.8125rem; color: var(--text-dark-muted); border-top: 1px solid var(--border-light); background: #FFFFFF;">
+    &copy; 2026 GatewayOfChess. All rights reserved.
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
